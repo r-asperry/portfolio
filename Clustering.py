@@ -122,46 +122,4 @@ these methods when analyzing this dataset.
 """
 
 
-"""
-FROM ELISA:
-Assignment 5 – we are grouping airlines together based on their safety record. 
-Since we are graphing in 2d space for better understanding, we were choosing 
-2 features from the features provided in the data set. Choosing these features 
-is based on what we may assume contributes to an airline’s safety record.
-
-In your assignment, you have your X input as the following:
-X = air_data[["incidents_85_99", "fatal_accidents_85_99", "fatalities_85_99", "incidents_00_14" , "fatal_accidents_00_14","fatalities_00_14"]]
-
-For this assignment, and according to your code, the assumption was that one 
-is grouping airlines by fatalities from 1985 to 1999 and 2000 to 2014. 
-When attempting to align the centroids with these attributes on your scatterplot, 
-the line of code written on your assignment is the following:
-
-plt.scatter(centroids[:,0], centroids[:,2])
-
-The centroids you are accessing are column 0 and column 2 of the centroid 
-vector – and when you are calculating your centroids, you are fitting based on 
-your X input. As a result, the centroid vector will contain calculations for 
-each attribute in X. Since you have 6 attributes in your X input and are 
-plotting based on the "fatalities_85_99" and “fatalities_00_14”, 
-this means you would need to access the following to receive an 
-understanding of how airlines are grouped based on fatalities:
-
-plt.scatter(centroids[:,2], centroids[:,5])
-
-centroids[:,2] would align with index 2 of X input (fatalities_85_99) – 
-this grabs all the rows of column 2
-centroids[:,5] would align with index 5 of X input (fatalities_00_14) – 
-this grabs all the rows of column 5
-
-These centroids should align with the features you chose in your scatterplot. 
-This was an index access mistake. The analysis is not incorrect. 
-The column 0 and column 2 of the centroid you plotted on your assignment 
-accesses centroids from the index 0 and 2 of the X input – which would be 
-“incidents_85_99” and “fatalities_85_99”. 
-The centroid alignment would not make sense unless you were using plotting 
-those specific features on your scatterplot.
-"""
-
-
 
